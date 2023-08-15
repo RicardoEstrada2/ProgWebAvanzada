@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            canvas{
+                background-color: #FFFFFF;
+            }
+        </style>
+    </head>
+    <body>
+
+        <canvas width="520" height="560" id="myCanvas"></canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas")
+            var ctx = canvas.getContext("2d")
+
+            ctx.fillStyle = "pink";
+            ctx.strokeStyle = "pink";
+            ctx.beginPath();
+            ctx.moveTo(100,80);
+            ctx.lineTo(200, 180);
+            ctx.lineTo(300, 180)
+            ctx.lineTo(100,80);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.strokeStyle = "black";
+            ctx.beginPath();
+            ctx.moveTo(90, 60);
+            ctx.lineTo(250, 150);
+            ctx.stroke();
+            ctx.closePath();
+
+        </script>
+    </body>
+</html>
