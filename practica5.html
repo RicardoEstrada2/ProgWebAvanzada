@@ -1,0 +1,24 @@
+<html>
+<head>
+    <style>
+        canvas{
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+<canvas width="520" height="560" id="myCanvas"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas")
+    var ctx = canvas.getContext("2d")
+    var grd = ctx.createLinearGradient(0,0,400,200)
+
+    grd.addColorStop(0, "#0DF2D6");
+    grd.addColorStop(1, "#FCFCFC");
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, 400, 200);
+
+</script>
+</body>
+</html>

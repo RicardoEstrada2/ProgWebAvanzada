@@ -1,0 +1,25 @@
+<html>
+<head>
+    <style>
+        canvas{
+            background-color: #FFFFFF;
+        }
+
+        #imagen{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<img id="imagen" src="./imagenes/Axolotl-PNG-Clipart.png" alt="axolotl">
+<canvas width="520" height="560" id="myCanvas"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas")
+    var ctx = canvas.getContext("2d")
+    var image = document.getElementById("imagen");
+    
+    ctx.drawImage(image, 0, 0)
+
+</script>
+</body>
+</html>
