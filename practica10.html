@@ -1,0 +1,46 @@
+<html>
+<head>
+    <style>
+        canvas{
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+<canvas  width="520" height="560" id="myCanvas"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var out = false;
+
+    canvas.addEventListener("mouseover", (e) => {
+        ctx.fillStyle = random_rgba();
+    })
+
+    canvas.addEventListener("mouseout", (e) => {
+        if (!out){
+            out = true
+        } else { out = false}
+    })
+
+    canvas.addEventListener("mousedown", (e) => {
+        if (!out){
+            ctx.beginPath();
+            ctx.arc(e.offsetX, e.offsetY, 50, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+        } else {
+            ctx.beginPath();
+            ctx.fillRect(e.offsetX, e.offsetY, 50, 50);
+            ctx.closePath();
+        }
+    })
+
+    function random_rgba() {
+        var o = Math.round, r = Math.random, s = 255;
+        return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+    }
+
+</script>
+</body>
+</html>
