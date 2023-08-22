@@ -1,0 +1,78 @@
+<html>
+<head>
+    <style>
+        body{
+            background-color: #000000;
+        }
+        canvas{
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+<canvas width="520" height="560" id="myCanvas"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var color = random_rgba();
+    var x = 250, y = 250;
+
+    document.addEventListener("keyup", (e) => {
+        console.log(e);
+
+        switch (e.key){
+            case 'w':
+                if(y === 0){
+                    break;
+                } else {
+                    y -= 10;
+                    break;
+                }
+            case 's':
+                if(y === 460){
+                    break;
+                } else {
+                    y += 10;
+                    break;
+                }
+            case 'a':
+                if(x === 0){
+                    break;
+                } else {
+                    x -= 10;
+                    break;
+                }
+            case 'd':
+                if(x === 420){
+                    break;
+                } else {
+                    x += 10;
+                    break;
+                }
+        }
+        update();
+    });
+
+    function update(){
+        ctx.beginPath();
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, 520, 560);
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.fillRect(x, y, 100, 100);
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+        ctx.closePath()
+    }
+
+    function random_rgba() {
+        var o = Math.round, r = Math.random, s = 255;
+        return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+    }
+
+</script>
+</body>
+</html>
