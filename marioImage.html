@@ -1,0 +1,114 @@
+<html>
+<head>
+    <style>
+        canvas{
+            background-color: #B2EEFE;
+        }
+    </style>
+</head>
+<body>
+
+<canvas width="640" height="360" id="myCanvas"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas")
+    var ctx = canvas.getContext("2d")
+
+    /* piso */
+    ctx.lineWidth = 3
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#EAD1BA";
+    ctx.fillRect(0,324,640,12)
+    ctx.strokeRect(0,324,640,12)
+
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#F29C72";
+    ctx.fillRect(0,336,640,26)
+    ctx.strokeRect(0,336,640,26)
+
+    /*Bloques 1 y 2*/
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#FF905F";
+    ctx.strokeRect(100,50,38,38);
+    ctx.fillRect(100,50,38,38);
+
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#FF905F";
+    ctx.strokeRect(138,50,38,38);
+    ctx.fillRect(138,50,38,38);
+
+    /* Bloque 3 */
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#FF905F";
+    ctx.strokeRect(25,162,38,38);
+    ctx.fillRect(25,162,38,38);
+
+    /* Bloque 4 */
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#FF905F";
+    ctx.strokeRect(580,84,38,38);
+    ctx.fillRect(580,84,38,38);
+
+    /* Puntos de los Bloques 1 y 2 y 3 y 4*/
+    ctx.fillStyle = "black";
+    ctx.fillRect(103,53,2,2);
+    ctx.fillRect(130,53,2,2);
+    ctx.fillRect(103,81,2,2);
+    ctx.fillRect(130,81,2,2);
+
+    ctx.fillRect(141,53,2,2);
+    ctx.fillRect(170,53,2,2);
+    ctx.fillRect(141,81,2,2);
+    ctx.fillRect(170,81,2,2);
+
+    ctx.fillRect(27,166,2,2);
+    ctx.fillRect(27,194,2,2);
+    ctx.fillRect(58,166,2,2);
+    ctx.fillRect(58,194,2,2);
+
+    ctx.fillRect(582,86,2,2);
+    ctx.fillRect(582,118,2,2);
+    ctx.fillRect(614,86,2,2);
+    ctx.fillRect(614,118,2,2);
+
+    /* Segundo Background Cuadrado */
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#84C0FE";
+    ctx.strokeRect(226,124,118,199);
+    ctx.fillRect(226,124,118,199);
+
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "black";
+    ctx.strokeRect(346,142,20,181);
+    ctx.fillRect(346,142,20,181);
+
+    /* Primer Background Cuadrado */
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#FEC4B6";
+    ctx.strokeRect(143,201,116,122);
+    ctx.fillRect(143,201,116,122);
+
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "black";
+    ctx.strokeRect(260,222,20,100);
+    ctx.fillRect(260,222,20,100);
+
+    /* Primer Bloque del tubo */
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#1D860D";
+    ctx.strokeRect(422,204,80,40);
+    ctx.fillRect(422,204,80,40);
+
+    /* Segundo Bloque del tubo */
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#1D860D";
+    ctx.strokeRect(426,245,73,79);
+    ctx.fillRect(426,245,73,79);
+
+    /* Tercer Background Cuadrado */
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#FEC4B6";
+    ctx.strokeRect(545,201,116,122);
+    ctx.fillRect(545,201,116,122);
+</script>
+</body>
+</html>
